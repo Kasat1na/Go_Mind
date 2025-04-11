@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="max_text_height">400dp</dimen> <!-- Максимальная высота для текста -->
+    <dimen name="default_text_height">200dp</dimen> <!-- Размер по умолчанию для текста -->
+</resources>

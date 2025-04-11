@@ -1,0 +1,122 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp"
+    android:background="@drawable/autentication_background">
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:hint="Введите email"
+        android:fontFamily="@font/regular"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/main_blue"
+        android:textColorHint="#6AF87D40"
+        android:padding="15dp"
+
+        android:layout_marginBottom="5dp"/>
+
+    <!-- Ошибка для email -->
+    <TextView
+        android:id="@+id/email_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_light"
+        android:visibility="gone"
+        android:textSize="14sp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="start"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp">
+
+        <EditText
+            android:id="@+id/edt_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_edittext_background"
+            android:hint="Введите пароль"
+            android:padding="15dp"
+            android:fontFamily="@font/regular"
+            android:textStyle="bold"
+            android:textColor="@color/main_blue"
+            android:textSize="20sp"
+            android:textColorHint="#6AF87D40" />
+
+        <ImageView
+            android:id="@+id/password_toggle_eye"
+            android:layout_width="45dp"
+            android:layout_height="55dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:padding="10dp"
+            android:src="@drawable/eye2"
+            android:visibility="visible"
+            android:contentDescription="Hide password" />
+
+        <ImageView
+            android:id="@+id/password_toggle_eye_open"
+            android:layout_width="45dp"
+            android:layout_height="55dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:padding="10dp"
+            android:src="@drawable/eye"
+            android:visibility="gone"
+            android:contentDescription="Show password" />
+    </RelativeLayout>
+
+    <!-- Ошибка для пароля -->
+    <TextView
+        android:id="@+id/password_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_light"
+        android:visibility="gone"
+        android:textSize="14sp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="start"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/enter_btn"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/auth_button"
+        android:text="Войти"
+        android:textAlignment="center"
+        android:fontFamily="@font/regular"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:backgroundTint="@null" />
+
+    <TextView
+        android:id="@+id/support_text"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Служба поддержки"
+        android:fontFamily="@font/regular"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#DC6A33"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"/>
+</LinearLayout>

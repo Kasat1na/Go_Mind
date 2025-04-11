@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape>
+            <solid android:color="#FFFFFF"/> <!-- Цвет белого контура -->
+            <corners android:radius="30dp"/> <!-- Радиус закругления -->
+            <size android:width="0.5dp" android:height="0.5dp"/> <!-- Уменьшенный размер белого контура -->
+        </shape>
+    </item>
+
+
+
+    <!-- Прозрачный слой -->
+    <item android:top="1dp" android:left="1dp" android:right="1dp" android:bottom="1dp">
+        <shape>
+            <gradient
+                android:angle="315"
+                android:startColor="#5F92E2"
+                android:endColor="#9EB9E4"
+                android:type="linear"/>
+            <corners android:radius="30dp"/> <!-- Радиус закругления -->
+        </shape>
+    </item>
+
+    <!-- Средний слой с градиентом -->
+    <item android:top="4dp" android:left="4dp" android:right="4dp" android:bottom="4dp">
+        <shape>
+            <gradient
+                android:startColor="#1E3761"
+                android:endColor="@color/soft_blue"
+                android:angle="0"/>
+            <corners android:radius="30dp"/> <!-- Радиус закругления -->
+            <size android:width="20dp" android:height="20dp"/> <!-- Размер для эффекта контура -->
+        </shape>
+    </item>
+
+    <!-- Внутренний слой с фоном -->
+    <item android:top="6dp" android:left="6dp" android:right="6dp" android:bottom="6dp">
+        <shape>
+            <solid android:color="#F0F0F0"/> <!-- Цвет фона поля -->
+            <corners android:radius="30dp"/> <!-- Радиус закругления -->
+        </shape>
+    </item>
+
+</layer-list>

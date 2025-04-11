@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/main_background">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="-10dp"
+        android:background="@drawable/header_background">
+
+        <TextView
+            android:layout_width="204dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="17dp"
+            android:text="Личный кабинет"
+            android:textColor="@color/white"
+            android:fontFamily="@font/regular"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+<ImageView
+    android:layout_width="360dp"
+    android:layout_height="wrap_content"
+    android:src="@drawable/progile_img"
+    android:layout_marginTop="15dp"
+    android:layout_gravity="center_horizontal"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/rounded_button_white"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/krug"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="33dp"
+            android:src="@drawable/hik"/>
+
+        <EditText
+            android:id="@+id/edt_bid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="11dp"
+            android:textColorHint="#1E3761"
+            android:fontFamily="@font/regular"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/main_blue"
+            android:background="@null"/>
+
+
+
+    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/rounded_button_white"
+            android:layout_marginBottom="16dp">
+
+            <!-- Иконка "krug" (по умолчанию) -->
+            <ImageView
+                android:id="@+id/icon_krug"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="320dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/krug"
+                android:visibility="visible"/>
+
+            <!-- Иконка "cross" (по умолчанию скрыта) -->
+            <ImageView
+                android:id="@+id/icon_cross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="320dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/cross"
+                android:visibility="gone"/>
+
+            <!-- Иконка "done" (по умолчанию скрыта) -->
+            <ImageView
+                android:id="@+id/icon_done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="280dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/done"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/email"/>
+
+            <!-- Поле ввода Email (по умолчанию неактивно) -->
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="11dp"
+                android:textColorHint="#1E3761"
+                android:fontFamily="@font/regular"
+                android:textStyle="bold"
+                android:textColor="@color/main_blue"
+                android:textSize="20sp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/rounded_button_white"
+        android:layout_marginBottom="16dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/grush"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/gru"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_pears"
+            android:padding="11dp"
+            android:fontFamily="@font/regular"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/main_blue"
+            android:textColorHint="#F87D40"
+            android:background="@null" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/rounded_button_white"
+        android:layout_marginBottom="16dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ball"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/balll"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_points"
+            android:layout_marginLeft="10dp"
+            android:textColorHint="#F87D40"
+            android:background="@null"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/regular"
+            android:textStyle="bold"
+            android:textColor="@color/main_blue"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/support_text"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:text="! Баллы отображаются за участие в последней викторине. Каждая викторина длится 60 минут !"
+        android:fontFamily="@font/regular"
+        android:textStyle="bold"
+        android:textSize="10sp"
+        android:textColor="#DC6A33"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_below="@+id/variant_buttons"
+        android:layout_marginTop="15dp"
+        android:id="@+id/money"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="48dp"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="Вывод средств"
+        android:background="@drawable/auth_button"
+        app:iconTintMode="multiply"
+        app:backgroundTint="@null"
+        android:fontFamily="@font/regular"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textFontWeight="900"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_below="@+id/variant_buttons"
+        android:layout_marginTop="15dp"
+        android:id="@+id/byu_fruits"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="48dp"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="Покупка груш"
+        android:background="@drawable/auth_button"
+        app:iconTintMode="multiply"
+        app:backgroundTint="@null"
+        android:fontFamily="@font/regular"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textFontWeight="900"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_below="@+id/variant_buttons"
+        android:layout_marginTop="15dp"
+        android:id="@+id/add_image_btn"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="48dp"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="Загрузка"
+        android:background="@drawable/reg_button"
+        app:iconTintMode="multiply"
+        app:backgroundTint="@null"
+        android:fontFamily="@font/regular"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textFontWeight="900"/>
+
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_below="@+id/variant_buttons"
+            android:layout_marginTop="15dp"
+            android:id="@+id/exit_btn"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="48dp"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="Выход"
+            android:background="@drawable/reg_button"
+            app:iconTintMode="multiply"
+            app:backgroundTint="@null"
+            android:fontFamily="@font/regular"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textFontWeight="900"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_below="@+id/variant_buttons"
+            android:layout_marginTop="15dp"
+            android:id="@+id/auction_btn"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="48dp"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="Аукцион"
+            android:background="@drawable/reg_button"
+            app:iconTintMode="multiply"
+            app:backgroundTint="@null"
+            android:fontFamily="@font/regular"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textFontWeight="900"/>
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

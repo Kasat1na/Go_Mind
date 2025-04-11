@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/main_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="-10dp"
+            android:background="@drawable/header_background"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:text="Личный кабинет"
+                android:textColor="@color/white"
+                android:fontFamily="@font/regular"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/queue_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/header"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center">
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="70dp"
+                android:layout_height="1.5dp"
+                android:background="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:text="Очередь на рекламу"
+                android:textColor="@color/white"
+                android:fontFamily="@font/regular"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="70dp"
+                android:layout_height="1.5dp"
+                android:layout_marginLeft="5dp"
+                android:background="#FFFFFF" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bet_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/queue_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:text="Купить рекламу"
+            android:background="@drawable/auth_button"
+            android:textColor="@color/white"
+            app:iconTintMode="multiply"
+            app:backgroundTint="@null"
+            android:fontFamily="@font/regular"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAlignment="center" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/question_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bet_btn"
+            android:layout_margin="10dp"
+            android:clipToPadding="false" />
+
+    </RelativeLayout>
+</ScrollView>

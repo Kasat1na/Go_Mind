@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">certs.yoomoney.ru</domain>
+    </domain-config>
+    <!-- Разрешите нешифрованный трафик для всех доменов (если требуется) -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">example.com</domain> <!-- Другие домены, если нужно -->
+    </domain-config>
+</network-security-config>

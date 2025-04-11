@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Внешняя белая обводка -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="30dp" />
+            <solid android:color="#FFFFFF" /> <!-- Белый цвет внешней обводки -->
+        </shape>
+    </item>
+
+    <!-- Прозрачная область -->
+    <item android:left="3dp" android:right="3dp" android:top="3dp" android:bottom="3dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="27dp" />
+            <solid android:color="#00000000" /> <!-- Прозрачный цвет -->
+        </shape>
+    </item>
+
+    <!-- Внутренняя цветная обводка -->
+    <item android:left="6dp" android:right="6dp" android:top="6dp" android:bottom="6dp">
+        <shape android:shape="rectangle">
+            <corners android:radius="24dp" />
+            <solid android:color="#FFFFFF" /> <!-- Основной фон кнопки -->
+            <stroke android:width="2dp" android:color="#FFA500" /> <!-- Оранжевая рамка -->
+        </shape>
+    </item>
+
+</layer-list>

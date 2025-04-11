@@ -1,0 +1,88 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'com.example.gomind'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.gomind"
+        minSdk 24
+        targetSdk 34
+        versionCode 14
+        versionName "1.4.5"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'key0'
+            keyPassword 'Vlad72229'
+            storeFile file("$rootDir/cert/release.keystore")
+            storePassword 'Vlad72229'
+        }
+        // Если хотите явно указать для debug, можете задать так:
+        debug {
+            keyAlias 'key0'
+            keyPassword 'Vlad72229'
+            storeFile file("$rootDir/cert/release.keystore")
+            storePassword 'Vlad72229'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            // Чтобы debug-сборка подписывалась тем же сертификатом, используем ту же конфигурацию:
+            signingConfig signingConfigs.release
+            // Либо, если задали отдельную конфигурацию debug:
+            // signingConfig signingConfigs.debug
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+
+    implementation libs.material
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.9.0'
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.retrofit2:converter-scalars:2.3.0")
+    implementation("com.squareup.retrofit2:adapter-rxjava:2.9.0")
+    implementation ("com.google.android.gms:play-services-maps:18.2.0")
+    implementation ("com.squareup.okhttp3:okhttp:4.11.0")
+    implementation ("com.squareup.okhttp3:okhttp-urlconnection:4.11.0")
+    implementation 'ru.yoomoney.sdk.kassa.payments:yookassa-android-sdk:6.10.0'
+    implementation 'com.github.mhiew:android-pdf-viewer:3.2.0-beta.3'
+ //   implementation platform("ru.rustore.sdk:bom:7.0.0")
+  //  implementation "ru.rustore.sdk:billingclient"
+    implementation platform(libs.rustore.sdk.bom)
+    implementation libs.rustore.sdk.billingclient
+
+}

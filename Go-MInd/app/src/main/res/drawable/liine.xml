@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape>
+            <gradient
+                android:angle="315"
+                android:startColor="#FF7F43"
+                android:endColor="#FBC597"
+                android:type="linear"/>
+            <corners android:radius="30dp"/><!-- Уменьшенный размер белого контура -->
+        </shape>
+    </item>
+
+
+
+
+
+    <!-- Внутренний слой с фоном -->
+    <item android:top="6dp" android:left="6dp" android:right="6dp" android:bottom="6dp">
+        <shape>
+            <gradient
+                android:angle="315"
+                android:startColor="#FF7F43"
+                android:endColor="#FBC597"
+                android:type="linear"/>
+            <corners android:radius="30dp"/>
+        </shape>
+    </item>
+
+</layer-list>

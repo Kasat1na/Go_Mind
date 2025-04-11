@@ -1,0 +1,6 @@
+<!-- res/drawable/page_border.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#D3D3D3"/> <!-- Светло-серый цвет -->
+    <corners android:radius="4dp"/> <!-- Закругленные углы -->
+    <stroke android:color="#A9A9A9" android:width="2dp"/> <!-- Темно-серая рамка -->
+</shape>

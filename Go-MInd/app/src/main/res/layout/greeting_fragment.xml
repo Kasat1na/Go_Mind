@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/autentication_background">
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/login_button_background"
+            android:onClick="onClick"
+            android:text="Войти"
+            android:textAlignment="center"
+            android:textColor="#DC6A33"
+            android:fontFamily="@font/regular"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:backgroundTint="@null" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/register_button"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/register_button_background"
+        android:fontFamily="@font/regular"
+        android:onClick="onClick"
+        android:text="Зарегистрироваться"
+        android:textAlignment="center"
+        android:textColor="#1E3761"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+       />
+
+
+</LinearLayout>

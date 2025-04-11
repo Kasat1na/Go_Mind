@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Внешний белый контур -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#96FFFFFF"/> <!-- Полупрозрачный белый цвет -->
+            <corners
+                android:topLeftRadius="30dp"
+                android:topRightRadius="30dp"
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="0dp"
+                />
+            <size android:width="30dp" android:height="30dp"/> <!-- Уменьшенный размер белого контура -->
+        </shape>
+    </item>
+
+    <!-- Прозрачный слой с градиентом -->
+    <item android:top="1dp" android:left="1dp" android:right="1dp" android:bottom="1dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="315"
+                android:startColor="#7495B5E6"
+                android:endColor="#8DCCD6E7"
+                android:type="linear"/>
+            <corners
+                android:topLeftRadius="30dp"
+                android:topRightRadius="30dp"
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="0dp"
+                />
+        </shape>
+    </item>
+
+
+</layer-list>
