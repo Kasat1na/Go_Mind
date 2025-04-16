@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import com.example.gomind.PaymentsModule;
+//import com.example.gomind.PaymentsModule;
 import com.example.gomind.model.ApiResponse;
 import com.example.gomind.R;
 import com.example.gomind.SharedPrefManager;
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     // RuStoreBillingClient billingClient = YourDependencyInjection.getBillingClient();
 
-    private static final RuStoreBillingClient billingClient = PaymentsModule.provideRuStorebillingClient();
+   // private static final RuStoreBillingClient billingClient = PaymentsModule.provideRuStorebillingClient();
 
     public MainActivity() {
         super(R.layout.activity_main);
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        billingClient.onNewIntent(intent);
+       // billingClient.onNewIntent(intent);
     }
 
     @Override
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         if (savedInstanceState == null) {
-            billingClient.onNewIntent(getIntent());
+         //   billingClient.onNewIntent(getIntent());
             Log.d("Клиент: ", "Мейн");
         }
 // Инициализация SoundManager

@@ -55,6 +55,11 @@
             </intent-filter>
 
         </activity>
+        <activity android:name=".TestActivity"
+            android:label="@string/app_name"
+            android:exported="false"> <!-- Эта активность будет доступна для тестирования -->
+        </activity>
+
     </application>
 
 </manifest>

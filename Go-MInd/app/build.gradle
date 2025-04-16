@@ -15,7 +15,6 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-
     }
 
     signingConfigs {
@@ -66,7 +65,6 @@ dependencies {
     implementation libs.material
     implementation 'com.squareup.okhttp3:logging-interceptor:4.12.0'
     implementation 'com.github.bumptech.glide:glide:4.16.0'
-    implementation 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1'
 
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
@@ -85,5 +83,27 @@ dependencies {
     //  implementation "ru.rustore.sdk:billingclient"
     implementation platform(libs.rustore.sdk.bom)
     implementation libs.rustore.sdk.billingclient
+
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.fragment:fragment-testing:1.6.2'
+    testImplementation 'org.mockito:mockito-core:4.8.0'
+    androidTestImplementation 'org.mockito:mockito-android:4.8.0'
+
+
+// Для Espresso
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.5.0' // Если вам нужны тесты для интентов
+
+// Для JUnit
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+
+// Для работы с корутинами (если используете их в приложении)
+    androidTestImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0'
+
+// Для Idling Resources (если необходимо)
+    androidTestImplementation 'androidx.test.espresso.idling:idling-concurrent:3.5.0'
+
 
 }

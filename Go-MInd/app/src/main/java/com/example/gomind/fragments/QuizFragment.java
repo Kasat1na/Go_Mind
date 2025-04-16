@@ -47,14 +47,14 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
     private AnswersAdapter answersAdapter;
     private List<String> answersList = new ArrayList<>();
     private Question question;
-    private int selectedAnswerId = -1; // ID выбранного ответа
+    public int selectedAnswerId = -1; // ID выбранного ответа
     private TextView txtQuestion;
     private Button answerBtn;
     private ImageView imgAds;
     private TextView remainingTimeTextView;
     private TextView txtPoints;
     private ScheduledExecutorService scheduler;
-    private QuestionAPI questionAPI;
+    public QuestionAPI questionAPI;
 
     private final Handler mainThreadHandler = new Handler(Looper.getMainLooper());
     private int id = 0;
@@ -97,6 +97,13 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
         getQuestion(); // Получаем первый вопрос
 
         return view;
+    }
+
+    public void setQuestionAPI(QuestionAPI questionAPI) {
+        this.questionAPI = questionAPI;
+    }
+    public void fetchPoints() {
+        getPoints(); // Вызов приватного метода
     }
 
     private void getPoints() {
@@ -153,7 +160,6 @@ public class QuizFragment extends Fragment implements View.OnClickListener {
             }
         });
     }
-
 
 
 

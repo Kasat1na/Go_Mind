@@ -16,7 +16,7 @@ public class SharedPrefManager {
     private static final String VISITED_KEY = "IS_VISITED";
     private static final String AGREEMENT_ACCEPTED_KEY = "AGREEMENT_ACCEPTED";
     private static final String FIRST_RUN_KEY = "FIRST_RUN";
-
+    private static final String LOGGED_IN_KEY = "isLoggedIn";
 
     private static SharedPrefManager mInstance;
     private final SharedPreferences sharedPreferences;
@@ -151,6 +151,13 @@ public class SharedPrefManager {
     // Очистка данных (например, при выходе из аккаунта)
     public void clear() {
         editor.clear();
+        editor.apply();
+    }
+
+
+    // --- Сохранение и получение состояния входа ---
+    public void setLoggedIn(boolean loggedIn) {
+        editor.putBoolean(LOGGED_IN_KEY, loggedIn);
         editor.apply();
     }
 }

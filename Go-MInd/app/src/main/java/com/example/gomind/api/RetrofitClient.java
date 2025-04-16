@@ -53,9 +53,9 @@ public class RetrofitClient {
         return retrofit.create(AuthAPI.class);
     }
 
-    public PaymentAPI getPaymentApi(){
-        return retrofit.create(PaymentAPI.class);
-    }
+//    public PaymentAPI getPaymentApi(){
+//        return retrofit.create(PaymentAPI.class);
+//    }
 
     public UserAPI getUserAPI(){
         return retrofit.create(UserAPI.class);

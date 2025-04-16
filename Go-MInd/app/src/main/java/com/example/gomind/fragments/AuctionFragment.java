@@ -62,12 +62,12 @@ public class AuctionFragment extends Fragment {
 
     private void navigateToUploadFragment() {
         // Создаем объект UploadFragment
-        Fragment uploadFragment = new UploadFragment();
+//        Fragment uploadFragment = new UploadFragment();
 
         // Выполняем замену фрагмента
         requireActivity().getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.main_container, uploadFragment) // Убедитесь, что ID контейнера верный
+//                .replace(R.id.main_container, uploadFragment) // Убедитесь, что ID контейнера верный
                 .addToBackStack(null) // Добавляем в BackStack для возможности вернуться назад
                 .commit();
     }
